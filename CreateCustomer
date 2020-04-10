@@ -1,0 +1,1342 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The Root Schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "required": [
+        "action",
+        "organization",
+        "account",
+        "contact"
+    ],
+    "properties": {
+        "action": {
+            "$id": "#/properties/action",
+            "type": "array",
+            "title": "The Action Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+                "$id": "#/properties/action/items",
+                "type": "object",
+                "title": "The Items Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                    {
+                        "name": "CREATE_ORG"
+                    },
+                    {
+                        "name": "CREATE_ACCOUNT"
+                    },
+                    {
+                        "name": "CREATE_CONTACT"
+                    }
+                ],
+                "required": [
+                    "name"
+                ],
+                "properties": {
+                    "name": {
+                        "$id": "#/properties/action/items/properties/name",
+                        "type": "string",
+                        "title": "The Name Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "CREATE_ORG"
+                        ]
+                    }
+                }
+            }
+        },
+        "organization": {
+            "$id": "#/properties/organization",
+            "type": "object",
+            "title": "The Organization Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "industry": "",
+                    "isTarget": "",
+                    "revenue": "",
+                    "shortname": "",
+                    "organization_id": "Unique identifier for Customer.Pega will return this during create request",
+                    "website": "",
+                    "businessTerritory": "",
+                    "employeeCount": "",
+                    "ticker": "",
+                    "parentorg": "",
+                    "domains": [
+                        {
+                            "name": ""
+                        }
+                    ],
+                    "name": "",
+                    "addresses": [
+                        {
+                            "streetaddress": "",
+                            "city": "",
+                            "zip": "",
+                            "isPrimary": "",
+                            "country": "",
+                            "state": "",
+                            "address": "",
+                            "addresstype": ""
+                        }
+                    ]
+                }
+            ],
+            "required": [
+                "organization_id",
+                "name",
+                "ticker",
+                "shortname",
+                "revenue",
+                "employeeCount",
+                "isTarget",
+                "parentorg",
+                "website",
+                "businessTerritory",
+                "industry",
+                "addresses",
+                "domains"
+            ],
+            "properties": {
+                "organization_id": {
+                    "$id": "#/properties/organization/properties/organization_id",
+                    "type": "string",
+                    "title": "The Organization_id Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Unique identifier for Customer.Pega will return this during create request"
+                    ]
+                },
+                "name": {
+                    "$id": "#/properties/organization/properties/name",
+                    "type": "string",
+                    "title": "The Name Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "ticker": {
+                    "$id": "#/properties/organization/properties/ticker",
+                    "type": "string",
+                    "title": "The Ticker Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "shortname": {
+                    "$id": "#/properties/organization/properties/shortname",
+                    "type": "string",
+                    "title": "The Shortname Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "revenue": {
+                    "$id": "#/properties/organization/properties/revenue",
+                    "type": "string",
+                    "title": "The Revenue Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "employeeCount": {
+                    "$id": "#/properties/organization/properties/employeeCount",
+                    "type": "string",
+                    "title": "The Employeecount Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "isTarget": {
+                    "$id": "#/properties/organization/properties/isTarget",
+                    "type": "string",
+                    "title": "The Istarget Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "parentorg": {
+                    "$id": "#/properties/organization/properties/parentorg",
+                    "type": "string",
+                    "title": "The Parentorg Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "website": {
+                    "$id": "#/properties/organization/properties/website",
+                    "type": "string",
+                    "title": "The Website Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "businessTerritory": {
+                    "$id": "#/properties/organization/properties/businessTerritory",
+                    "type": "string",
+                    "title": "The Businessterritory Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "industry": {
+                    "$id": "#/properties/organization/properties/industry",
+                    "type": "string",
+                    "title": "The Industry Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "addresses": {
+                    "$id": "#/properties/organization/properties/addresses",
+                    "type": "array",
+                    "title": "The Addresses Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "items": {
+                        "$id": "#/properties/organization/properties/addresses/items",
+                        "type": "object",
+                        "title": "The Items Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "address": "",
+                                "addresstype": "",
+                                "streetaddress": "",
+                                "city": "",
+                                "zip": "",
+                                "isPrimary": "",
+                                "country": "",
+                                "state": ""
+                            }
+                        ],
+                        "required": [
+                            "addresstype",
+                            "isPrimary",
+                            "streetaddress",
+                            "address",
+                            "city",
+                            "state",
+                            "zip",
+                            "country"
+                        ],
+                        "properties": {
+                            "addresstype": {
+                                "$id": "#/properties/organization/properties/addresses/items/properties/addresstype",
+                                "type": "string",
+                                "title": "The Addresstype Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "isPrimary": {
+                                "$id": "#/properties/organization/properties/addresses/items/properties/isPrimary",
+                                "type": "string",
+                                "title": "The Isprimary Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "streetaddress": {
+                                "$id": "#/properties/organization/properties/addresses/items/properties/streetaddress",
+                                "type": "string",
+                                "title": "The Streetaddress Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "address": {
+                                "$id": "#/properties/organization/properties/addresses/items/properties/address",
+                                "type": "string",
+                                "title": "The Address Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "city": {
+                                "$id": "#/properties/organization/properties/addresses/items/properties/city",
+                                "type": "string",
+                                "title": "The City Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "state": {
+                                "$id": "#/properties/organization/properties/addresses/items/properties/state",
+                                "type": "string",
+                                "title": "The State Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "zip": {
+                                "$id": "#/properties/organization/properties/addresses/items/properties/zip",
+                                "type": "string",
+                                "title": "The Zip Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "country": {
+                                "$id": "#/properties/organization/properties/addresses/items/properties/country",
+                                "type": "string",
+                                "title": "The Country Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            }
+                        }
+                    }
+                },
+                "domains": {
+                    "$id": "#/properties/organization/properties/domains",
+                    "type": "array",
+                    "title": "The Domains Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "items": {
+                        "$id": "#/properties/organization/properties/domains/items",
+                        "type": "object",
+                        "title": "The Items Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "name": ""
+                            }
+                        ],
+                        "required": [
+                            "name"
+                        ],
+                        "properties": {
+                            "name": {
+                                "$id": "#/properties/organization/properties/domains/items/properties/name",
+                                "type": "string",
+                                "title": "The Name Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "account": {
+            "$id": "#/properties/account",
+            "type": "object",
+            "title": "The Account Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "owner": "",
+                    "organization_id": "",
+                    "shortname": "",
+                    "website": "",
+                    "phoneNumber": "",
+                    "closeComments": "",
+                    "businessTerritory": "",
+                    "employeeCount": "",
+                    "domains": [
+                        {
+                            "name": ""
+                        }
+                    ],
+                    "name": "",
+                    "addresses": [
+                        {
+                            "state": "",
+                            "address": "",
+                            "addresstype": "",
+                            "streetaddress": "",
+                            "city": "",
+                            "zip": "",
+                            "isPrimary": "",
+                            "country": ""
+                        }
+                    ],
+                    "account_id": "Unique Record.Pega will return this during create request",
+                    "isTarget": "",
+                    "revenue": ""
+                }
+            ],
+            "required": [
+                "account_id",
+                "name",
+                "shortname",
+                "organization_id",
+                "owner",
+                "revenue",
+                "employeeCount",
+                "isTarget",
+                "website",
+                "businessTerritory",
+                "closeComments",
+                "phoneNumber",
+                "addresses",
+                "domains"
+            ],
+            "properties": {
+                "account_id": {
+                    "$id": "#/properties/account/properties/account_id",
+                    "type": "string",
+                    "title": "The Account_id Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Unique Record.Pega will return this during create request"
+                    ]
+                },
+                "name": {
+                    "$id": "#/properties/account/properties/name",
+                    "type": "string",
+                    "title": "The Name Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "shortname": {
+                    "$id": "#/properties/account/properties/shortname",
+                    "type": "string",
+                    "title": "The Shortname Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "organization_id": {
+                    "$id": "#/properties/account/properties/organization_id",
+                    "type": "string",
+                    "title": "The Organization_id Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "owner": {
+                    "$id": "#/properties/account/properties/owner",
+                    "type": "string",
+                    "title": "The Owner Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "revenue": {
+                    "$id": "#/properties/account/properties/revenue",
+                    "type": "string",
+                    "title": "The Revenue Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "employeeCount": {
+                    "$id": "#/properties/account/properties/employeeCount",
+                    "type": "string",
+                    "title": "The Employeecount Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "isTarget": {
+                    "$id": "#/properties/account/properties/isTarget",
+                    "type": "string",
+                    "title": "The Istarget Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "website": {
+                    "$id": "#/properties/account/properties/website",
+                    "type": "string",
+                    "title": "The Website Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "businessTerritory": {
+                    "$id": "#/properties/account/properties/businessTerritory",
+                    "type": "string",
+                    "title": "The Businessterritory Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "closeComments": {
+                    "$id": "#/properties/account/properties/closeComments",
+                    "type": "string",
+                    "title": "The Closecomments Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "phoneNumber": {
+                    "$id": "#/properties/account/properties/phoneNumber",
+                    "type": "string",
+                    "title": "The Phonenumber Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "addresses": {
+                    "$id": "#/properties/account/properties/addresses",
+                    "type": "array",
+                    "title": "The Addresses Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "items": {
+                        "$id": "#/properties/account/properties/addresses/items",
+                        "type": "object",
+                        "title": "The Items Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "streetaddress": "",
+                                "city": "",
+                                "zip": "",
+                                "country": "",
+                                "isPrimary": "",
+                                "state": "",
+                                "address": "",
+                                "addresstype": ""
+                            }
+                        ],
+                        "required": [
+                            "addresstype",
+                            "isPrimary",
+                            "streetaddress",
+                            "address",
+                            "city",
+                            "state",
+                            "zip",
+                            "country"
+                        ],
+                        "properties": {
+                            "addresstype": {
+                                "$id": "#/properties/account/properties/addresses/items/properties/addresstype",
+                                "type": "string",
+                                "title": "The Addresstype Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "isPrimary": {
+                                "$id": "#/properties/account/properties/addresses/items/properties/isPrimary",
+                                "type": "string",
+                                "title": "The Isprimary Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "streetaddress": {
+                                "$id": "#/properties/account/properties/addresses/items/properties/streetaddress",
+                                "type": "string",
+                                "title": "The Streetaddress Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "address": {
+                                "$id": "#/properties/account/properties/addresses/items/properties/address",
+                                "type": "string",
+                                "title": "The Address Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "city": {
+                                "$id": "#/properties/account/properties/addresses/items/properties/city",
+                                "type": "string",
+                                "title": "The City Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "state": {
+                                "$id": "#/properties/account/properties/addresses/items/properties/state",
+                                "type": "string",
+                                "title": "The State Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "zip": {
+                                "$id": "#/properties/account/properties/addresses/items/properties/zip",
+                                "type": "string",
+                                "title": "The Zip Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "country": {
+                                "$id": "#/properties/account/properties/addresses/items/properties/country",
+                                "type": "string",
+                                "title": "The Country Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            }
+                        }
+                    }
+                },
+                "domains": {
+                    "$id": "#/properties/account/properties/domains",
+                    "type": "array",
+                    "title": "The Domains Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "items": {
+                        "$id": "#/properties/account/properties/domains/items",
+                        "type": "object",
+                        "title": "The Items Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "name": ""
+                            }
+                        ],
+                        "required": [
+                            "name"
+                        ],
+                        "properties": {
+                            "name": {
+                                "$id": "#/properties/account/properties/domains/items/properties/name",
+                                "type": "string",
+                                "title": "The Name Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "contact": {
+            "$id": "#/properties/contact",
+            "type": "object",
+            "title": "The Contact Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "associatedaccounts": [
+                        {
+                            "enddate": "",
+                            "startdate": "",
+                            "organization_id": "",
+                            "relationshiptype": "",
+                            "account_id": "",
+                            "relationshipdescription": ""
+                        }
+                    ],
+                    "account_id": "",
+                    "birthdate": "",
+                    "assistantphone": "",
+                    "lastName": "",
+                    "assistantemail": "",
+                    "reportsto": "",
+                    "associatedcontacts": [
+                        {
+                            "relationshiptype": "",
+                            "relationshipdescription": "",
+                            "contact_id": "",
+                            "startdate": "",
+                            "enddate": ""
+                        }
+                    ],
+                    "organization_id": "",
+                    "associatedorgs": [
+                        {
+                            "startdate": "",
+                            "organization_id": "",
+                            "enddate": "",
+                            "relationshiptype": "",
+                            "relationshipdescription": ""
+                        }
+                    ],
+                    "influentialrating": "",
+                    "territoryID": "",
+                    "contact_id": "Unique Record.Pega will return this during create request",
+                    "salutation": "",
+                    "title": "",
+                    "assistantname": "",
+                    "department": "",
+                    "favorabilityrating": "",
+                    "fax": "",
+                    "managementLevel": "",
+                    "addresses": [
+                        {
+                            "addresstype": "",
+                            "city": "",
+                            "streetaddress": "",
+                            "zip": "",
+                            "country": "",
+                            "isPrimary": "",
+                            "state": "",
+                            "address": ""
+                        }
+                    ]
+                }
+            ],
+            "required": [
+                "contact_id",
+                "organization_id",
+                "account_id",
+                "salutation",
+                "lastName",
+                "title",
+                "managementLevel",
+                "department",
+                "reportsto",
+                "favorabilityrating",
+                "influentialrating",
+                "territoryID",
+                "assistantemail",
+                "assistantname",
+                "assistantphone",
+                "birthdate",
+                "fax",
+                "addresses",
+                "associatedorgs",
+                "associatedaccounts",
+                "associatedcontacts"
+            ],
+            "properties": {
+                "contact_id": {
+                    "$id": "#/properties/contact/properties/contact_id",
+                    "type": "string",
+                    "title": "The Contact_id Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Unique Record.Pega will return this during create request"
+                    ]
+                },
+                "organization_id": {
+                    "$id": "#/properties/contact/properties/organization_id",
+                    "type": "string",
+                    "title": "The Organization_id Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "account_id": {
+                    "$id": "#/properties/contact/properties/account_id",
+                    "type": "string",
+                    "title": "The Account_id Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "salutation": {
+                    "$id": "#/properties/contact/properties/salutation",
+                    "type": "string",
+                    "title": "The Salutation Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "lastName": {
+                    "$id": "#/properties/contact/properties/lastName",
+                    "type": "string",
+                    "title": "The Lastname Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "title": {
+                    "$id": "#/properties/contact/properties/title",
+                    "type": "string",
+                    "title": "The Title Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "managementLevel": {
+                    "$id": "#/properties/contact/properties/managementLevel",
+                    "type": "string",
+                    "title": "The Managementlevel Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "department": {
+                    "$id": "#/properties/contact/properties/department",
+                    "type": "string",
+                    "title": "The Department Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "reportsto": {
+                    "$id": "#/properties/contact/properties/reportsto",
+                    "type": "string",
+                    "title": "The Reportsto Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "favorabilityrating": {
+                    "$id": "#/properties/contact/properties/favorabilityrating",
+                    "type": "string",
+                    "title": "The Favorabilityrating Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "influentialrating": {
+                    "$id": "#/properties/contact/properties/influentialrating",
+                    "type": "string",
+                    "title": "The Influentialrating Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "territoryID": {
+                    "$id": "#/properties/contact/properties/territoryID",
+                    "type": "string",
+                    "title": "The Territoryid Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "assistantemail": {
+                    "$id": "#/properties/contact/properties/assistantemail",
+                    "type": "string",
+                    "title": "The Assistantemail Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "assistantname": {
+                    "$id": "#/properties/contact/properties/assistantname",
+                    "type": "string",
+                    "title": "The Assistantname Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "assistantphone": {
+                    "$id": "#/properties/contact/properties/assistantphone",
+                    "type": "string",
+                    "title": "The Assistantphone Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "birthdate": {
+                    "$id": "#/properties/contact/properties/birthdate",
+                    "type": "string",
+                    "title": "The Birthdate Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "fax": {
+                    "$id": "#/properties/contact/properties/fax",
+                    "type": "string",
+                    "title": "The Fax Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                },
+                "addresses": {
+                    "$id": "#/properties/contact/properties/addresses",
+                    "type": "array",
+                    "title": "The Addresses Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "items": {
+                        "$id": "#/properties/contact/properties/addresses/items",
+                        "type": "object",
+                        "title": "The Items Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "zip": "",
+                                "isPrimary": "",
+                                "country": "",
+                                "state": "",
+                                "address": "",
+                                "addresstype": "",
+                                "streetaddress": "",
+                                "city": ""
+                            }
+                        ],
+                        "required": [
+                            "addresstype",
+                            "isPrimary",
+                            "streetaddress",
+                            "address",
+                            "city",
+                            "state",
+                            "zip",
+                            "country"
+                        ],
+                        "properties": {
+                            "addresstype": {
+                                "$id": "#/properties/contact/properties/addresses/items/properties/addresstype",
+                                "type": "string",
+                                "title": "The Addresstype Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "isPrimary": {
+                                "$id": "#/properties/contact/properties/addresses/items/properties/isPrimary",
+                                "type": "string",
+                                "title": "The Isprimary Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "streetaddress": {
+                                "$id": "#/properties/contact/properties/addresses/items/properties/streetaddress",
+                                "type": "string",
+                                "title": "The Streetaddress Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "address": {
+                                "$id": "#/properties/contact/properties/addresses/items/properties/address",
+                                "type": "string",
+                                "title": "The Address Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "city": {
+                                "$id": "#/properties/contact/properties/addresses/items/properties/city",
+                                "type": "string",
+                                "title": "The City Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "state": {
+                                "$id": "#/properties/contact/properties/addresses/items/properties/state",
+                                "type": "string",
+                                "title": "The State Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "zip": {
+                                "$id": "#/properties/contact/properties/addresses/items/properties/zip",
+                                "type": "string",
+                                "title": "The Zip Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "country": {
+                                "$id": "#/properties/contact/properties/addresses/items/properties/country",
+                                "type": "string",
+                                "title": "The Country Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            }
+                        }
+                    }
+                },
+                "associatedorgs": {
+                    "$id": "#/properties/contact/properties/associatedorgs",
+                    "type": "array",
+                    "title": "The Associatedorgs Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "items": {
+                        "$id": "#/properties/contact/properties/associatedorgs/items",
+                        "type": "object",
+                        "title": "The Items Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "relationshipdescription": "",
+                                "startdate": "",
+                                "organization_id": "",
+                                "enddate": "",
+                                "relationshiptype": ""
+                            }
+                        ],
+                        "required": [
+                            "organization_id",
+                            "relationshiptype",
+                            "relationshipdescription",
+                            "startdate",
+                            "enddate"
+                        ],
+                        "properties": {
+                            "organization_id": {
+                                "$id": "#/properties/contact/properties/associatedorgs/items/properties/organization_id",
+                                "type": "string",
+                                "title": "The Organization_id Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "relationshiptype": {
+                                "$id": "#/properties/contact/properties/associatedorgs/items/properties/relationshiptype",
+                                "type": "string",
+                                "title": "The Relationshiptype Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "relationshipdescription": {
+                                "$id": "#/properties/contact/properties/associatedorgs/items/properties/relationshipdescription",
+                                "type": "string",
+                                "title": "The Relationshipdescription Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "startdate": {
+                                "$id": "#/properties/contact/properties/associatedorgs/items/properties/startdate",
+                                "type": "string",
+                                "title": "The Startdate Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "enddate": {
+                                "$id": "#/properties/contact/properties/associatedorgs/items/properties/enddate",
+                                "type": "string",
+                                "title": "The Enddate Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            }
+                        }
+                    }
+                },
+                "associatedaccounts": {
+                    "$id": "#/properties/contact/properties/associatedaccounts",
+                    "type": "array",
+                    "title": "The Associatedaccounts Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "items": {
+                        "$id": "#/properties/contact/properties/associatedaccounts/items",
+                        "type": "object",
+                        "title": "The Items Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "startdate": "",
+                                "organization_id": "",
+                                "relationshiptype": "",
+                                "account_id": "",
+                                "relationshipdescription": "",
+                                "enddate": ""
+                            }
+                        ],
+                        "required": [
+                            "organization_id",
+                            "account_id",
+                            "relationshiptype",
+                            "relationshipdescription",
+                            "startdate",
+                            "enddate"
+                        ],
+                        "properties": {
+                            "organization_id": {
+                                "$id": "#/properties/contact/properties/associatedaccounts/items/properties/organization_id",
+                                "type": "string",
+                                "title": "The Organization_id Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "account_id": {
+                                "$id": "#/properties/contact/properties/associatedaccounts/items/properties/account_id",
+                                "type": "string",
+                                "title": "The Account_id Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "relationshiptype": {
+                                "$id": "#/properties/contact/properties/associatedaccounts/items/properties/relationshiptype",
+                                "type": "string",
+                                "title": "The Relationshiptype Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "relationshipdescription": {
+                                "$id": "#/properties/contact/properties/associatedaccounts/items/properties/relationshipdescription",
+                                "type": "string",
+                                "title": "The Relationshipdescription Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "startdate": {
+                                "$id": "#/properties/contact/properties/associatedaccounts/items/properties/startdate",
+                                "type": "string",
+                                "title": "The Startdate Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "enddate": {
+                                "$id": "#/properties/contact/properties/associatedaccounts/items/properties/enddate",
+                                "type": "string",
+                                "title": "The Enddate Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            }
+                        }
+                    }
+                },
+                "associatedcontacts": {
+                    "$id": "#/properties/contact/properties/associatedcontacts",
+                    "type": "array",
+                    "title": "The Associatedcontacts Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "items": {
+                        "$id": "#/properties/contact/properties/associatedcontacts/items",
+                        "type": "object",
+                        "title": "The Items Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "relationshiptype": "",
+                                "relationshipdescription": "",
+                                "contact_id": "",
+                                "startdate": "",
+                                "enddate": ""
+                            }
+                        ],
+                        "required": [
+                            "contact_id",
+                            "relationshiptype",
+                            "relationshipdescription",
+                            "startdate",
+                            "enddate"
+                        ],
+                        "properties": {
+                            "contact_id": {
+                                "$id": "#/properties/contact/properties/associatedcontacts/items/properties/contact_id",
+                                "type": "string",
+                                "title": "The Contact_id Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "relationshiptype": {
+                                "$id": "#/properties/contact/properties/associatedcontacts/items/properties/relationshiptype",
+                                "type": "string",
+                                "title": "The Relationshiptype Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "relationshipdescription": {
+                                "$id": "#/properties/contact/properties/associatedcontacts/items/properties/relationshipdescription",
+                                "type": "string",
+                                "title": "The Relationshipdescription Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "startdate": {
+                                "$id": "#/properties/contact/properties/associatedcontacts/items/properties/startdate",
+                                "type": "string",
+                                "title": "The Startdate Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            },
+                            "enddate": {
+                                "$id": "#/properties/contact/properties/associatedcontacts/items/properties/enddate",
+                                "type": "string",
+                                "title": "The Enddate Schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
